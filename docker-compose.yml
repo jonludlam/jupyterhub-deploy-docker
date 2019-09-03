@@ -33,9 +33,9 @@ services:
       - "/var/run/docker.sock:/var/run/docker.sock:rw"
       # Bind Docker volume on host for JupyterHub database and cookie secrets
       - "data:${DATA_VOLUME_CONTAINER}"
-      - "/users:/users"
+      - "/Users/jon/users:/users"
     ports:
-      - "443:443"
+      - "8000:8000"
       - "80:80"
     links:
       - hub-db
